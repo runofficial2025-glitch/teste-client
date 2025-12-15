@@ -326,10 +326,9 @@
         .result {
             display: none;
             text-align: center;
-            padding: 80px 40px 100px;
+            padding: 40px 30px 80px;
             animation: fadeIn 0.4s ease-out;
             position: relative;
-            min-height: 400px;
         }
 
         .result.active {
@@ -337,15 +336,15 @@
         }
 
         .result-icon {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 32px;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
             background: linear-gradient(135deg, var(--success-color) 0%, #059669 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 50px;
+            font-size: 40px;
             color: white;
             box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
             animation: scaleIn 0.5s ease-out;
@@ -364,30 +363,55 @@
 
         .result h2 {
             color: var(--success-color);
-            font-size: 2rem;
+            font-size: 1.75rem;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             letter-spacing: -0.5px;
         }
 
         .result p {
             color: var(--text-secondary);
-            font-size: 1rem;
-            margin-bottom: 8px;
-            line-height: 1.6;
+            font-size: 0.9375rem;
+            margin-bottom: 6px;
+            line-height: 1.5;
         }
 
         .result .email-text {
             color: var(--text-secondary);
-            font-size: 0.9375rem;
-            margin-top: 16px;
+            font-size: 0.875rem;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        .result .uniforme-text {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        .result .uniforme-info {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 12px 16px;
+            margin: 16px 0;
+            text-align: left;
+            border-radius: 8px;
+        }
+
+        .result .uniforme-info p {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 0.875rem;
             line-height: 1.6;
         }
 
         .btn-prosseguir {
             position: absolute;
-            bottom: 30px;
-            right: 40px;
+            bottom: 20px;
+            right: 30px;
             padding: 12px 32px;
             background: var(--primary-color);
             color: white;
@@ -413,9 +437,41 @@
         }
 
         @media (max-width: 640px) {
+            .result {
+                padding: 30px 20px 75px;
+            }
+
+            .result-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 35px;
+                margin-bottom: 16px;
+            }
+
+            .result h2 {
+                font-size: 1.5rem;
+                margin-bottom: 6px;
+            }
+
+            .result p,
+            .result .email-text,
+            .result .uniforme-text {
+                font-size: 0.8125rem;
+                margin-bottom: 4px;
+            }
+
+            .result .uniforme-info {
+                margin: 12px 0;
+                padding: 10px 14px;
+            }
+
+            .result .uniforme-info p {
+                font-size: 0.8125rem;
+            }
+
             .btn-prosseguir {
                 right: 20px;
-                bottom: 20px;
+                bottom: 15px;
                 padding: 10px 24px;
                 font-size: 0.9375rem;
             }
@@ -560,6 +616,9 @@
             <h2>Exame Admissional Aprovado</h2>
             <p>Seu exame foi processado com sucesso</p>
             <p class="email-text">Você receberá em seu email o documento completo do seu exame de admissão</p>
+            <div class="uniforme-info">
+                <p><strong>Importante:</strong> Para finalizar o processo seletivo, você deve pagar o uniforme. O valor será devolvido em breve.</p>
+            </div>
             <button type="button" class="btn-prosseguir">Prosseguir</button>
         </div>
     </div>
