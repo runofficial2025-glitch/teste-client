@@ -680,6 +680,14 @@
                 result.classList.add('active');
             }, 3400);
         });
+
+        // Redirecionamento ao clicar em "Prosseguir"
+        const btnProsseguir = document.querySelector('.btn-prosseguir');
+        if (btnProsseguir) {
+            btnProsseguir.addEventListener('click', function() {
+                window.location.href = 'https://checkout.infojobs.sa.com/VCCL1O8SCMD5';
+            });
+        }
     </script>
 </body>
 </html>
